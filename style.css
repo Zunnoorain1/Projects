@@ -1,0 +1,166 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body{
+    background-color: white;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    border-bottom: 3px solid #c40000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo Section */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* Add Text After Logo */
+.logo::after{
+    content: "WHEAT & MEAT";
+    font-size: 28px;
+    font-weight: bold;
+    color: #c40000;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #c40000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header ul li a:hover{
+    color: black;
+}
+
+/* Main Section */
+main{
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+/* Heading */
+main h1{
+    font-size: 60px;
+    color: #c40000;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+main p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search/Input */
+main input{
+    width: 60%;
+    max-width: 500px;
+    padding: 14px;
+    margin: 25px 0;
+    border: 2px solid #c40000;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+main input:focus{
+    box-shadow: 0 0 10px rgba(196,0,0,0.4);
+}
+
+/* Specialties */
+dl{
+    background-color: rgba(255,255,255,0.9);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    border-left: 6px solid #c40000;
+}
+
+dl dt{
+    font-size: 24px;
+    font-weight: bold;
+    color: #c40000;
+    margin-top: 20px;
+}
+
+dl dd{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer{
+    background-color: #c40000;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    header ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main h1{
+        font-size: 42px;
+    }
+
+    main input{
+        width: 90%;
+    }
+}
